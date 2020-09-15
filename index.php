@@ -4,8 +4,6 @@ Visualizzare a schermo il paragrafo con la relativa lunghezza e sostituire la ba
 <?php 
 	$testo = "Nel mezzo del cammin di nostra vita mi ritrovai per una selva oscura ché la diritta via era smarrita.";
 
-	// $badword = 'belva';
-
 	$badword = $_GET['text'];
 
 	$newTesto = str_replace($badword, '***', $testo, $count);
@@ -24,12 +22,12 @@ Visualizzare a schermo il paragrafo con la relativa lunghezza e sostituire la ba
 <p> Il testo da correggere è : 
 <?php 
 	echo " $testo";
-?>
+?> Ed è lungo : <?php echo strlen($testo)?> 
 </p>
 <p>Il testo corretto è : 
 <?php
 	echo " $newTesto";
-?>
+?> 
 </p><span>Caratteri sostituiti : 
 <?php 
 	echo " $count"
